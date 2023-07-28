@@ -15,8 +15,6 @@ module.exports = class Email {
   }
 
   newTransport() {
-    console.log(process.env.HOST);
-
     return nodemailer.createTransport({
       host: process.env.HOST,
       // port: 587,
