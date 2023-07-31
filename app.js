@@ -1,4 +1,5 @@
 const express = require("express");
+const helmet = require("helmet");
 const logger = require("morgan");
 const cors = require("cors");
 const contactRoute = require("./routes/contactRoute");
@@ -12,6 +13,7 @@ const app = express();
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
+app.use(helmet());
 app.use(cors());
 app.use(express.json());
 app.use(logger("dev"));
