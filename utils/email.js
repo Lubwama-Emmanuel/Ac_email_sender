@@ -17,7 +17,7 @@ module.exports = class Email {
   newTransport() {
     return nodemailer.createTransport({
       host: process.env.HOST,
-      port: 587,
+      port: 25,
       secure: false, // true for 587, false for other ports
       auth: {
         user: process.env.ACCOUNT,
