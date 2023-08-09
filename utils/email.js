@@ -18,10 +18,14 @@ module.exports = class Email {
     return nodemailer.createTransport({
       host: process.env.HOST,
       // port: 587,
-      secure: true,
+      // secure: true,
       auth: {
         user: process.env.ACCOUNT,
         pass: process.env.PASS,
+      },
+      tls: {
+        // do not fail on invalid certs
+        rejectUnauthorized: false,
       },
     });
   }
