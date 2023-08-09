@@ -17,16 +17,16 @@ module.exports = class Email {
   newTransport() {
     return nodemailer.createTransport({
       host: process.env.HOST,
-      port: 587,
-      secure: false, // true for 587, false for other ports
+      // port: 587,
+      // secure: false, // true for 587, false for other ports
       auth: {
         user: process.env.ACCOUNT,
         pass: process.env.PASS,
       },
-      tls: {
-        // do not fail on invalid certs
-        rejectUnauthorized: false,
-      },
+      // tls: {
+      //   // do not fail on invalid certs
+      //   rejectUnauthorized: false,
+      // },
     });
   }
 
