@@ -62,4 +62,8 @@ module.exports = class Email {
   async sendContact() {
     await this.send("contact", "Ash Creek Advisors inquiry");
   }
+
+  async sendConnect() {
+    await this.send("contact", "Untangled Connect");
+  }
 };
