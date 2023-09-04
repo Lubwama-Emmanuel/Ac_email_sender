@@ -1,0 +1,19 @@
+extends baseEmail
+block content
+    p Connect Information Received from Untangled
+    ul
+        li Summary: #{checkedValue}
+        li Name: #{name}
+        li Email: #{email}
+        li Phone: #{phone}
+    //- table.btn.btn-primary(role='presentation', border='0', cellpadding='0', cellspacing='0')
+    //-     tbody
+    //-         tr
+    //-             td(align='left')
+    //-                 table(role='presentation', border='0', cellpadding='0', cellspacing='0')
+    //-                     tbody
+    //-                         tr
+    //-                             td
+    //-                                 a(href=`${url}`, target='_blank') Checkout More Apps
+    //- p Incase you find any difficulties in using the application please feel free to contact our support team at reserluts25@gmail.com
+    
