@@ -27,6 +27,8 @@ exports.sendConnect = async (req, res) => {
   try {
     const information = req.body;
 
+    console.log(information);
+
     await new Email(information).sendConnect();
 
     res.status(200).json({

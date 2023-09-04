@@ -19,5 +19,6 @@ app.use(express.json());
 app.use(logger("dev"));
 
 app.use("/api/emailSender/contact", contactRoute);
+
 app.use(errorHandler);
 module.exports = app;
